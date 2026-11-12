@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Unit 3 Notes | WebLearn</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">🌐 WebLearn</div>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="syllabus.html">Syllabus</a></li>
+            <li><a href="notes.html" class="active">Notes</a></li>
+            <li><a href="#">Feedback</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Header -->
+    <section class="notes-header">
+
+        <p class="small-title">WEB TECHNOLOGY • UNIT 3</p>
+
+        <h1>Web Services & AJAX</h1>
+
+        <p>
+            Complete theory notes covering Web Services, SOAP, REST,
+            AJAX and modern asynchronous web communication.
+        </p>
+
+    </section>
+
+
+    <main class="unit-notes">
+
+
+        <!-- =========================================
+             TOPIC 1: WEB SERVICES
+        ========================================== -->
+
+        <article class="topic-card">
+
+            <h2>1. Introduction to Web Services</h2>
+
+            <h3>1.1 What is a Web Service?</h3>
+
+            <p>
+                A web service is a software system that allows different
+                applications to communicate and exchange information over a
+                network, usually the Internet. Web services make it possible
+                for applications developed using different programming
+                languages and running on different platforms to work together.
+            </p>
+
+            <p>
+                For example, one application may be developed in Java while
+                another application is developed using Python or JavaScript.
+                A web service can provide a common method through which these
+                applications exchange data.
+            </p>
+
+            <h3>1.2 Basic Working of a Web Service</h3>
+
+            <div class="diagram">
+                <p><strong>Client Application</strong></p>
+                <p>↓ Request</p>
+                <p><strong>Internet / Network</strong></p>
+                <p>↓</p>
+                <p><strong>Web Service</strong></p>
+                <p>↓</p>
+                <p><strong>Server / Database</strong></p>
+                <p>↓ Response</p>
+                <p><strong>Client Application</strong></p>
+            </div>
+
+            <p>
+                In this process, the client sends a request to the web service.
+                The web service processes the request, communicates with the
+                required system or database, and sends a response back to the
+                client.
+            </p>
+
+            <h3>1.3 Characteristics of Web Services</h3>
+
+            <ul>
+                <li>They support communication between different applications.</li>
+                <li>They can exchange structured data over a network.</li>
+                <li>They are platform independent.</li>
+                <li>They can be used by websites, mobile applications and software.</li>
+                <li>They help different systems work together.</li>
+            </ul>
+
+            <h3>1.4 Advantages of Web Services</h3>
+
+            <ul>
+                <li>Allow communication between different technologies.</li>
+                <li>Promote software reusability.</li>
+                <li>Make data sharing easier.</li>
+                <li>Support distributed applications.</li>
+                <li>Can be used by multiple clients.</li>
+            </ul>
+
+            <h3>1.5 Disadvantages of Web Services</h3>
+
+            <ul>
+                <li>Network communication may introduce delays.</li>
+                <li>Security must be properly managed.</li>
+                <li>Complex services can be difficult to maintain.</li>
+                <li>Internet connectivity is often required.</li>
+            </ul>
+
+            <h3>1.6 Applications</h3>
+
+            <ul>
+                <li>Online payment systems</li>
+                <li>Weather information services</li>
+                <li>Maps and location services</li>
+                <li>Online shopping applications</li>
+                <li>Mobile applications</li>
+                <li>Social media platforms</li>
+            </ul>
+
+            <h3>1.7 Real-Life Example</h3>
+
+            <p>
+                Consider a travel website that displays flight information.
+                Instead of storing all airline information itself, the website
+                can communicate with airline web services. The service returns
+                information such as available flights, timings and prices.
+            </p>
+
+            <h3>Important Exam Points</h3>
+
+            <ul>
+                <li>A web service allows applications to communicate over a network.</li>
+                <li>Web services support interoperability between different platforms.</li>
+                <li>They commonly follow a request and response model.</li>
+            </ul>
+
+        </article>
+
+
+
+        <!-- =========================================
+             TOPIC 2: SOAP
+        ========================================== -->
+
+        <article class="topic-card">
+
+            <h2>2. SOAP Web Services</h2>
+
+            <h3>2.1 Introduction to SOAP</h3>
+
+            <p>
+                SOAP stands for Simple Object Access Protocol. It is a protocol
+                used for exchanging structured information between applications
+                over a network.
+            </p>
+
+            <p>
+                SOAP messages are traditionally represented using XML. The
+                protocol provides a structured way for a client and server to
+                communicate.
+            </p>
+
+            <h3>2.2 Structure of a SOAP Message</h3>
+
+            <div class="diagram">
+                <p><strong>SOAP Message</strong></p>
+                <p>│</p>
+                <p>├── Envelope</p>
+                <p>│   ├── Header</p>
+                <p>│   └── Body</p>
+                <p>│</p>
+                <p>└── Response Message</p>
+            </div>
+
+            <h3>2.3 SOAP Envelope</h3>
+
+            <p>
+                The SOAP envelope is the main container of a SOAP message.
+                It identifies the XML document as a SOAP message and contains
+                the other parts of the message.
+            </p>
+
+            <h3>2.4 SOAP Header</h3>
+
+            <p>
+                The header can contain additional information related to the
+                message, such as information needed during message processing.
+            </p>
+
+            <h3>2.5 SOAP Body</h3>
+
+            <p>
+                The body contains the main information or request being sent
+                between the client and the web service.
+            </p>
+
+            <h3>Advantages of SOAP</h3>
+
+            <ul>
+                <li>Provides a standardized communication structure.</li>
+                <li>Supports structured XML messages.</li>
+                <li>Useful for enterprise-level applications.</li>
+                <li>Can support formal communication requirements.</li>
+            </ul>
+
+            <h3>Disadvantages of SOAP</h3>
+
+            <ul>
+                <li>SOAP messages can be large because they use XML.</li>
+                <li>Processing can be more complex than simpler approaches.</li>
+                <li>It may require more bandwidth than lightweight formats.</li>
+            </ul>
+
+            <h3>Real-Life Example</h3>
+
+            <p>
+                Large organizations may use structured web service communication
+                to connect different business applications, such as customer,
+                banking or inventory systems.
+            </p>
+
+        </article>
+
+
+
+        <!-- =========================================
+             TOPIC 3: REST
+        ========================================== -->
+
+        <article class="topic-card">
+
+            <h2>3. RESTful Web Services</h2>
+
+            <h3>3.1 Introduction to REST</h3>
+
+            <p>
+                REST stands for Representational State Transfer. REST is an
+                architectural style used for designing web services.
+            </p>
+
+            <p>
+                RESTful services commonly use HTTP methods to perform different
+                operations on resources. A resource can represent information
+                such as a student, product, user or order.
+            </p>
+
+            <h3>3.2 Common HTTP Methods</h3>
+
+            <ul>
+                <li><strong>GET:</strong> Used to retrieve information.</li>
+                <li><strong>POST:</strong> Used to create new information.</li>
+                <li><strong>PUT:</strong> Used to update information.</li>
+                <li><strong>DELETE:</strong> Used to remove information.</li>
+            </ul>
+
+            <h3>3.3 REST Working Diagram</h3>
+
+            <div class="diagram">
+                <p><strong>Web or Mobile Application</strong></p>
+                <p>↓ HTTP Request</p>
+                <p><strong>REST API</strong></p>
+                <p>↓</p>
+                <p><strong>Server / Database</strong></p>
+                <p>↓</p>
+                <p><strong>JSON or Other Data Response</strong></p>
+                <p>↓</p>
+                <p><strong>User Application</strong></p>
+            </div>
+
+            <h3>3.4 Example of REST API Concept</h3>
+
+            <pre>
+GET /students
+</pre>
+
+            <p>
+                This type of request can be used to ask a web service for a
+                collection of student information.
+            </p>
+
+            <h3>Advantages of REST</h3>
+
+            <ul>
+                <li>Simple and easy to understand.</li>
+                <li>Works well with web technologies.</li>
+                <li>Supports different data formats.</li>
+                <li>Commonly used in modern web and mobile applications.</li>
+            </ul>
+
+            <h3>Disadvantages of REST</h3>
+
+            <ul>
+                <li>Different APIs may follow different design patterns.</li>
+                <li>Security and authentication must be implemented properly.</li>
+                <li>Complex applications may require careful API design.</li>
+            </ul>
+
+            <h3>Real-Life Example</h3>
+
+            <p>
+                A shopping application can send a request to a product API to
+                retrieve product names, prices and availability. The API sends
+                the requested information back to the application.
+            </p>
+
+        </article>
+
+
+
+        <!-- =========================================
+             TOPIC 4: AJAX
+        ========================================== -->
+
+        <article class="topic-card">
+
+            <h2>4. AJAX – Asynchronous JavaScript and XML</h2>
+
+            <h3>4.1 Introduction</h3>
+
+            <p>
+                AJAX stands for Asynchronous JavaScript and XML. It is a
+                technique used to exchange data with a server without requiring
+                the complete web page to reload.
+            </p>
+
+            <p>
+                AJAX makes web applications faster and more interactive. A web
+                page can request new information from a server and update only
+                the required part of the page.
+            </p>
+
+            <h3>4.2 Why is AJAX Called Asynchronous?</h3>
+
+            <p>
+                In asynchronous communication, the browser can continue
+                performing other tasks while a request is being processed.
+                When the response is received, JavaScript can update the
+                required part of the web page.
+            </p>
+
+            <h3>4.3 Traditional Web Request</h3>
+
+            <div class="diagram">
+                <p><strong>User Requests Data</strong></p>
+                <p>↓</p>
+                <p>Browser Sends Request</p>
+                <p>↓</p>
+                <p>Server Processes Request</p>
+                <p>↓</p>
+                <p>Complete Page Reloads</p>
+            </div>
+
+            <h3>4.4 AJAX Request</h3>
+
+            <div class="diagram">
+                <p><strong>User Performs an Action</strong></p>
+                <p>↓</p>
+                <p>JavaScript Sends Background Request</p>
+                <p>↓</p>
+                <p>Server Processes Request</p>
+                <p>↓</p>
+                <p>Server Sends Response</p>
+                <p>↓</p>
+                <p>Only Required Part of Page Updates</p>
+            </div>
+
+            <h3>4.5 Technologies Used with AJAX</h3>
+
+            <ul>
+                <li>HTML – Provides page structure.</li>
+                <li>CSS – Controls presentation and design.</li>
+                <li>JavaScript – Handles interaction and requests.</li>
+                <li>XML or JSON – Can be used for data exchange.</li>
+            </ul>
+
+            <h3>4.6 Simple AJAX Concept</h3>
+
+            <pre>
+User clicks a button
+        ↓
+JavaScript sends a request
+        ↓
+Server processes the request
+        ↓
+Server sends data back
+        ↓
+JavaScript updates the web page
+            </pre>
+
+            <h3>4.7 Advantages of AJAX</h3>
+
+            <ul>
+                <li>Improves the speed and responsiveness of web pages.</li>
+                <li>Reduces unnecessary complete page reloads.</li>
+                <li>Provides a better user experience.</li>
+                <li>Allows dynamic content updates.</li>
+            </ul>
+
+            <h3>4.8 Disadvantages of AJAX</h3>
+
+            <ul>
+                <li>Depends on JavaScript for many features.</li>
+                <li>Can make application development more complex.</li>
+                <li>Improper handling of requests can cause errors.</li>
+                <li>Security must be considered when exchanging data.</li>
+            </ul>
+
+            <h3>4.9 Applications of AJAX</h3>
+
+            <ul>
+                <li>Search suggestions</li>
+                <li>Live chat applications</li>
+                <li>Social media feeds</li>
+                <li>Online forms</li>
+                <li>Dynamic dashboards</li>
+            </ul>
+
+            <h3>4.10 Real-Life Example</h3>
+
+            <p>
+                When you type a search query on a website and suggestions
+                appear while you are still typing, the application can use
+                asynchronous communication to request relevant information
+                without completely reloading the page.
+            </p>
+
+            <h3>Important Exam Points</h3>
+
+            <ul>
+                <li>AJAX stands for Asynchronous JavaScript and XML.</li>
+                <li>AJAX allows communication with a server in the background.</li>
+                <li>It can update parts of a web page without a full reload.</li>
+                <li>Modern AJAX applications commonly exchange data using JSON.</li>
+            </ul>
+
+        </article>
+
+
+
+        <!-- =========================================
+             TOPIC 5: XML AND JSON
+        ========================================== -->
+
+        <article class="topic-card">
+
+            <h2>5. Data Exchange: XML and JSON</h2>
+
+            <h3>5.1 XML</h3>
+
+            <p>
+                XML stands for Extensible Markup Language. It is used to store
+                and exchange structured data. XML uses custom tags to describe
+                information.
+            </p>
+
+            <pre>
+&lt;student&gt;
+    &lt;name&gt;Aayush&lt;/name&gt;
+    &lt;course&gt;B.Tech&lt;/course&gt;
+&lt;/student&gt;
+            </pre>
+
+            <h3>5.2 JSON</h3>
+
+            <p>
+                JSON stands for JavaScript Object Notation. It is a lightweight
+                format commonly used to exchange data between web applications
+                and servers.
+            </p>
+
+            <pre>
+{
+    "name": "Aayush",
+    "course": "B.Tech"
+}
+            </pre>
+
+            <h3>5.3 XML and JSON Comparison</h3>
+
+            <div class="diagram">
+                <p><strong>XML</strong></p>
+                <p>Structured using opening and closing tags</p>
+                <p>↓</p>
+                <p><strong>JSON</strong></p>
+                <p>Structured using objects and key-value pairs</p>
+            </div>
+
+            <h3>Applications</h3>
+
+            <p>
+                XML and JSON are used to exchange information between
+                applications. Modern web APIs commonly use JSON because it is
+                lightweight and easy for JavaScript applications to process.
+            </p>
+
+        </article>
+
+
+
+        <!-- =========================================
+             TOPIC 6: CLIENT SERVER COMMUNICATION
+        ========================================== -->
+
+        <article class="topic-card">
+
+            <h2>6. Client-Server Communication</h2>
+
+            <h3>6.1 Introduction</h3>
+
+            <p>
+                Most web applications follow a client-server model. The client
+                is generally the user's browser or application, while the
+                server provides data, services or application functionality.
+            </p>
+
+            <h3>6.2 Working Process</h3>
+
+            <div class="diagram">
+                <p><strong>Client / Browser</strong></p>
+                <p>↓ Sends Request</p>
+                <p><strong>Web Server</strong></p>
+                <p>↓ Processes Request</p>
+                <p><strong>Application / Database</strong></p>
+                <p>↓ Generates Result</p>
+                <p><strong>Response Sent to Client</strong></p>
+            </div>
+
+            <p>
+                Web services and AJAX are important technologies used to improve
+                communication between clients and servers.
+            </p>
+
+            <h3>Real-Life Example</h3>
+
+            <p>
+                When a student logs into an educational website, the browser
+                sends login information to the server. The server verifies the
+                information and sends an appropriate response to the browser.
+            </p>
+
+        </article>
+
+
+
+        <!-- =========================================
+             UNIT SUMMARY
+        ========================================== -->
+
+        <article class="topic-card">
+
+            <h2>Unit 3 Summary</h2>
+
+            <p>
+                Unit 3 introduces important technologies that allow web
+                applications to communicate with servers and other software
+                systems. Web services provide a method for applications to
+                exchange information over a network.
+            </p>
+
+            <p>
+                SOAP provides a structured protocol for exchanging messages,
+                while REST is a widely used architectural approach for modern
+                web APIs. AJAX improves web application interactivity by
+                allowing data to be exchanged asynchronously without requiring
+                a complete page reload.
+            </p>
+
+            <div class="diagram">
+                <p><strong>Web Services & AJAX</strong></p>
+                <p>│</p>
+                <p>├── Web Services</p>
+                <p>│   ├── SOAP</p>
+                <p>│   └── REST</p>
+                <p>│</p>
+                <p>├── Data Exchange</p>
+                <p>│   ├── XML</p>
+                <p>│   └── JSON</p>
+                <p>│</p>
+                <p>└── AJAX</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp; └── Asynchronous Communication</p>
+            </div>
+
+        </article>
+
+
+        <!-- Back Button -->
+        <div class="back-section">
+
+            <a href="notes.html" class="back-button">
+                ← Back to All Units
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 WebLearn | Web Technology Learning Portal</p>
+    </footer>
+
+</body>
+
+</html>

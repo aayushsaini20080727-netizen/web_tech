@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Web Technology Learning Portal | WebLearn</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">🌐 Web<span>Learn</span></div>
+
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="syllabus.html">Syllabus</a></li>
+            <li><a href="notes.html">Notes</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><button onclick="logout()" class="logout-btn">Logout</button></li>
+        </ul>
+    </nav>
+
+
+    <!-- Home Section -->
+    <section class="home">
+
+        <div class="home-content">
+
+            <p class="welcome-text">🎓 WEB TECHNOLOGY LEARNING PORTAL</p>
+
+            <h1>Welcome, <span id="studentName">Student</span>! 👋</h1>
+
+            <p class="home-description">
+                Learn Web Technology with complete syllabus, detailed unit-wise
+                notes, important questions and interactive quizzes.
+            </p>
+
+            <div class="home-buttons">
+                <button onclick="openNotes()" class="primary-btn">
+                    📚 Explore Notes
+                </button>
+
+                <button onclick="openQuiz()" class="secondary-btn">
+                    📝 Take a Quiz
+                </button>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Features Section -->
+    <section class="features">
+
+        <div class="section-heading">
+            <p>LEARNING FEATURES</p>
+            <h2>Everything You Need to Learn 🚀</h2>
+            <span>Study, practice and test your Web Technology knowledge in one place.</span>
+        </div>
+
+        <div class="card-container">
+
+            <!-- Syllabus Card -->
+            <div class="card">
+                <div class="card-icon">📋</div>
+                <h3>Complete Syllabus</h3>
+                <p>View the complete Web Technology syllabus organised unit-wise.</p>
+                <a href="syllabus.html">View Syllabus →</a>
+            </div>
+
+
+            <!-- Notes Card -->
+            <div class="card">
+                <div class="card-icon">📚</div>
+                <h3>Unit-wise Notes</h3>
+                <p>Study detailed notes, examples and important topics for every unit.</p>
+                <a href="notes.html">Explore Notes →</a>
+            </div>
+
+
+            <!-- Quiz Card -->
+            <div class="card quiz-card">
+                <div class="card-icon">📝</div>
+                <h3>Practice Quiz</h3>
+                <p>Test your knowledge with multiple-choice questions from all units.</p>
+                <a href="quiz.html">Start Quiz →</a>
+            </div>
+
+
+            <!-- Feedback Card -->
+            <div class="card">
+                <div class="card-icon">💬</div>
+                <h3>Feedback</h3>
+                <p>Share your feedback and help us improve the learning portal.</p>
+                <a href="feedback.html">Give Feedback →</a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div>
+            <h3>🌐 WebLearn</h3>
+            <p>Your simple platform for learning Web Technology.</p>
+        </div>
+
+        <p class="copyright">
+            © 2026 WebLearn | Web Technology Learning Portal
+        </p>
+    </footer>
+
+
+    <script>
+
+        // Student login check
+        let name = localStorage.getItem("studentName");
+
+        // Agar login nahi hai to Login Page par bhejo
+        if (!name) {
+            window.location.href = "login.html";
+        } else {
+            document.getElementById("studentName").textContent = name;
+        }
+
+
+        // Open Notes Page
+        function openNotes() {
+            window.location.href = "notes.html";
+        }
+
+
+        // Open Quiz Page
+        function openQuiz() {
+            window.location.href = "quiz.html";
+        }
+
+
+        // Logout Function
+        function logout() {
+
+            localStorage.removeItem("studentName");
+            localStorage.removeItem("studentQid");
+            localStorage.removeItem("collegeName");
+            localStorage.removeItem("studentEmail");
+
+            window.location.href = "login.html";
+        }
+
+    </script>
+
+</body>
+
+</html>

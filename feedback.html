@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Feedback | WebLearn</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">🌐 WebLearn</div>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="syllabus.html">Syllabus</a></li>
+            <li><a href="notes.html">Notes</a></li>
+            <li><a href="feedback.html" class="active">Feedback</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Feedback Header -->
+    <section class="feedback-header">
+
+        <p class="small-title">YOUR OPINION MATTERS</p>
+
+        <h1>Share Your Feedback</h1>
+
+        <p>
+            Your feedback helps us improve the WebLearn learning portal.
+            Please share your experience with us.
+        </p>
+
+    </section>
+
+
+    <!-- Feedback Form -->
+    <main class="feedback-page">
+
+        <div class="feedback-container">
+
+            <!-- Student Information -->
+            <div class="student-info">
+
+                <h2>Student Information</h2>
+
+                <p>
+                    <strong>Name:</strong>
+                    <span id="displayName">Student</span>
+                </p>
+
+                <p>
+                    <strong>QID:</strong>
+                    <span id="displayQid">Not Available</span>
+                </p>
+
+                <p>
+                    <strong>College:</strong>
+                    <span id="displayCollege">Not Available</span>
+                </p>
+
+            </div>
+
+
+            <form id="feedbackForm">
+
+                <!-- Rating -->
+                <div class="form-group">
+
+                    <label>How would you rate WebLearn?</label>
+
+                    <div class="rating-options">
+
+                        <label>
+                            <input type="radio" name="rating" value="1" required>
+                            ⭐
+                        </label>
+
+                        <label>
+                            <input type="radio" name="rating" value="2">
+                            ⭐⭐
+                        </label>
+
+                        <label>
+                            <input type="radio" name="rating" value="3">
+                            ⭐⭐⭐
+                        </label>
+
+                        <label>
+                            <input type="radio" name="rating" value="4">
+                            ⭐⭐⭐⭐
+                        </label>
+
+                        <label>
+                            <input type="radio" name="rating" value="5">
+                            ⭐⭐⭐⭐⭐
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Feedback Category -->
+                <div class="form-group">
+
+                    <label for="category">Feedback Category</label>
+
+                    <select id="category" required>
+                        <option value="">Select a category</option>
+                        <option value="Notes Quality">Notes Quality</option>
+                        <option value="Website Design">Website Design</option>
+                        <option value="Syllabus Content">Syllabus Content</option>
+                        <option value="Technical Issue">Technical Issue</option>
+                        <option value="Other">Other</option>
+                    </select>
+
+                </div>
+
+
+                <!-- Feedback Message -->
+                <div class="form-group">
+
+                    <label for="message">Your Feedback</label>
+
+                    <textarea
+                        id="message"
+                        rows="6"
+                        placeholder="Write your feedback here..."
+                        required></textarea>
+
+                </div>
+
+
+                <button type="submit" class="submit-feedback">
+                    Submit Feedback →
+                </button>
+
+            </form>
+
+
+            <!-- Success Message -->
+            <div id="successMessage" class="success-message">
+
+                <div class="success-icon">✓</div>
+
+                <h2>Thank You!</h2>
+
+                <p>
+                    Your feedback has been submitted successfully.
+                    We appreciate you taking the time to help improve WebLearn.
+                </p>
+
+                <a href="index.html" class="home-link">
+                    ← Back to Home
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 WebLearn | Web Technology Learning Portal</p>
+    </footer>
+
+
+    <script>
+
+        let studentName = localStorage.getItem("studentName");
+        let studentQid = localStorage.getItem("studentQid");
+        let collegeName = localStorage.getItem("collegeName");
+
+
+        if (studentName) {
+            document.getElementById("displayName").textContent = studentName;
+        }
+
+        if (studentQid) {
+            document.getElementById("displayQid").textContent = studentQid;
+        }
+
+        if (collegeName) {
+            document.getElementById("displayCollege").textContent = collegeName;
+        }
+
+
+        document.getElementById("feedbackForm").addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            let selectedRating = document.querySelector(
+                'input[name="rating"]:checked'
+            );
+
+            if (!selectedRating) {
+                alert("Please select a rating.");
+                return;
+            }
+
+            let rating = selectedRating.value;
+            let category = document.getElementById("category").value;
+            let message = document.getElementById("message").value;
+
+
+            localStorage.setItem("feedbackRating", rating);
+            localStorage.setItem("feedbackCategory", category);
+            localStorage.setItem("feedbackMessage", message);
+
+
+            document.getElementById("feedbackForm").style.display = "none";
+            document.getElementById("successMessage").style.display = "block";
+
+        });
+
+    </script>
+
+</body>
+
+</html>

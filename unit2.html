@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Unit 2 Notes | WebLearn</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">🌐 WebLearn</div>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="syllabus.html">Syllabus</a></li>
+            <li><a href="notes.html" class="active">Notes</a></li>
+            <li><a href="#">Feedback</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Unit Header -->
+    <section class="notes-header">
+
+        <p class="small-title">WEB TECHNOLOGY • UNIT 2</p>
+
+        <h1>Web Page Technologies</h1>
+
+        <p>
+            Complete theory notes covering HTML elements, CSS, JavaScript,
+            XML technologies, Object Models and XML Processors.
+        </p>
+
+    </section>
+
+
+    <!-- Main Notes -->
+    <main class="unit-notes">
+
+
+        <!-- =========================================
+             TOPIC 1: HTML LISTS
+        ========================================== -->
+
+        <article class="topic-card">
+
+            <h2>1. HTML Lists</h2>
+
+            <h3>1.1 Introduction</h3>
+
+            <p>
+                Lists are used to organize related information in a clear and
+                structured manner. On a web page, information is often easier
+                to understand when it is displayed as a list instead of a
+                large paragraph.
+            </p>
+
+            <p>
+                Lists are commonly used for navigation menus, course topics,
+                product features, instructions, steps and many other types of
+                information. HTML provides three major types of lists:
+                ordered lists, unordered lists and description lists.
+            </p>
+
+
+            <h3>1.2 Types of Lists</h3>
+
+            <ul>
+                <li><strong>Ordered List:</strong> Used when the order of items is important.</li>
+                <li><strong>Unordered List:</strong> Used when items do not require a specific order.</li>
+                <li><strong>Description List:</strong> Used to display terms with their descriptions.</li>
+            </ul>
+
+
+            <h3>1.3 Ordered List</h3>
+
+            <p>
+                An ordered list is created using the &lt;ol&gt; tag. Each item
+                inside the list is created using the &lt;li&gt; tag. Ordered
+                lists are useful when information must be followed in a
+                particular sequence.
+            </p>
+
+            <pre>
+&lt;ol&gt;
+    &lt;li&gt;Open the web browser&lt;/li&gt;
+    &lt;li&gt;Enter the website address&lt;/li&gt;
+    &lt;li&gt;Press Enter&lt;/li&gt;
+&lt;/ol&gt;
+            </pre>
+
+
+            <h3>1.4 Unordered List</h3>
+
+            <p>
+                An unordered list is created using the &lt;ul&gt; tag. It
+                normally displays items using bullet points. The sequence of
+                the items is not important in an unordered list.
+            </p>
+
+            <pre>
+&lt;ul&gt;
+    &lt;li&gt;HTML&lt;/li&gt;
+    &lt;li&gt;CSS&lt;/li&gt;
+    &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;
+            </pre>
+
+
+            <h3>1.5 Description List</h3>
+
+            <p>
+                A description list is used when a term and its explanation need
+                to be displayed together. The &lt;dl&gt; tag creates the list,
+                &lt;dt&gt; defines the term and &lt;dd&gt; defines its
+                description.
+            </p>
+
+            <div class="diagram">
+                <p><strong>HTML Lists</strong></p>
+                <p>│</p>
+                <p>├── Ordered List → &lt;ol&gt;</p>
+                <p>├── Unordered List → &lt;ul&gt;</p>
+                <p>└── Description List → &lt;dl&gt;</p>
+            </div>
+
+
+            <h3>1.6 Advantages</h3>
+
+            <ul>
+                <li>Organizes information in a simple way.</li>
+                <li>Makes web content easier to read.</li>
+                <li>Useful for menus and navigation.</li>
+                <li>Can easily be designed using CSS.</li>
+            </ul>
+
+
+            <h3>1.7 Applications and Real-Life Example</h3>
+
+            <p>
+                Lists are used on educational websites to display subjects and
+                unit topics. For example, the navigation bar of the WebLearn
+                website contains different options such as Home, Syllabus and
+                Notes. A course syllabus can also use lists to show topics in
+                each unit.
+            </p>
+
+
+            <h3>Important Exam Points</h3>
+
+            <ul>
+                <li>&lt;ol&gt; creates an ordered list.</li>
+                <li>&lt;ul&gt; creates an unordered list.</li>
+                <li>&lt;li&gt; represents a list item.</li>
+                <li>&lt;dl&gt;, &lt;dt&gt; and &lt;dd&gt; are used for description lists.</li>
+            </ul>
+
+        </article>
+
+
+
+        <!-- =========================================
+             TOPIC 2: TABLES
+        ========================================== -->
+
+        <article class="topic-card">
+
+            <h2>2. HTML Tables</h2>
+
+            <h3>2.1 Introduction</h3>
+
+            <p>
+                Tables are used to display structured information in the form
+                of rows and columns. They are useful when different values need
+                to be compared or when information naturally belongs in a
+                tabular format.
+            </p>
+
+            <p>
+                Examples of information commonly displayed in tables include
+                student marks, timetables, product information, financial data
+                and course details.
+            </p>
+
+
+            <h3>2.2 Main Table Tags</h3>
+
+            <ul>
+                <li><strong>&lt;table&gt;</strong> – Creates the complete table.</li>
+                <li><strong>&lt;tr&gt;</strong> – Creates a table row.</li>
+                <li><strong>&lt;th&gt;</strong> – Creates a heading cell.</li>
+                <li><strong>&lt;td&gt;</strong> – Creates a data cell.</li>
+            </ul>
+
+
+            <h3>2.3 Example</h3>
+
+            <pre>
+&lt;table&gt;
+
+    &lt;tr&gt;
+        &lt;th&gt;Subject&lt;/th&gt;
+        &lt;th&gt;Marks&lt;/th&gt;
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+        &lt;td&gt;Web Technology&lt;/td&gt;
+        &lt;td&gt;85&lt;/td&gt;
+    &lt;/tr&gt;
+
+&lt;/table&gt;
+            </pre>
+
+
+            <h3>2.4 Table Diagram</h3>
+
+            <div class="diagram">
+                <p><strong>&lt;table&gt;</strong></p>
+                <p>│</p>
+                <p>├── &lt;tr&gt; → Table Row</p>
+                <p>│ &nbsp;&nbsp; ├── &lt;th&gt; → Heading</p>
+                <p>│ &nbsp;&nbsp; └── &lt;th&gt; → Heading</p>
+                <p>│</p>
+                <p>└── &lt;tr&gt; → Table Row</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp; ├── &lt;td&gt; → Data</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp; └── &lt;td&gt; → Data</p>
+            </div>
+
+
+            <h3>2.5 Advantages and Applications</h3>
+
+            <p>
+                Tables organize large amounts of structured information and
+                make comparison easier. They are widely used for timetables,
+                mark sheets, product comparisons and reports.
+            </p>
+
+
+            <h3>2.6 Limitations</h3>
+
+            <ul>
+                <li>Large tables may be difficult to read on mobile devices.</li>
+                <li>Complex tables can confuse users.</li>
+                <li>Tables should mainly be used for data, not complete page layouts.</li>
+            </ul>
+
+
+            <h3>Real-Life Example</h3>
+
+            <p>
+                A university website can use a table to display a student's
+                examination marks. Each row represents a subject and different
+                columns can represent marks, grades and results.
+            </p>
+
+        </article>
+
+
+
+        <!-- =========================================
+             TOPIC 3: IMAGES
+        ========================================== -->
+
+        <article class="topic-card">
+
+            <h2>3. Images in HTML</h2>
+
+            <h3>3.1 Introduction</h3>
+
+            <p>
+                Images make web pages more attractive and help users understand
+                information visually. Websites use images for logos, product
+                photographs, diagrams, icons and educational content.
+            </p>
+
+            <p>
+                The &lt;img&gt; tag is used to display an image in HTML. The
+                browser uses the image source to find and display the required
+                image file.
+            </p>
+
+
+            <h3>3.2 Basic Syntax</h3>
+
+            <pre>
+&lt;img src="college.jpg"
+     alt="College Building"&gt;
+            </pre>
+
+
+            <h3>3.3 Important Attributes</h3>
+
+            <ul>
+                <li><strong>src:</strong> Specifies the location of the image.</li>
+                <li><strong>alt:</strong> Provides alternative text.</li>
+                <li><strong>width:</strong> Specifies image width.</li>
+                <li><strong>height:</strong> Specifies image height.</li>
+            </ul>
+
+
+            <div class="diagram">
+                <p><strong>HTML Page</strong></p>
+                <p>↓</p>
+                <p>&lt;img&gt; Tag</p>
+                <p>↓</p>
+                <p>Image Source</p>
+                <p>↓</p>
+                <p>Browser Loads Image</p>
+                <p>↓</p>
+                <p>Image Displayed to User</p>
+            </div>
+
+
+            <h3>3.4 Advantages</h3>
+
+            <ul>
+                <li>Makes websites visually attractive.</li>
+                <li>Helps explain difficult concepts.</li>
+                <li>Improves user engagement.</li>
+                <li>Useful for branding and identification.</li>
+            </ul>
+
+
+            <h3>3.5 Disadvantages</h3>
+
+            <ul>
+                <li>Large images can slow down a website.</li>
+                <li>Too many images can increase page loading time.</li>
+                <li>Poor-quality images can reduce the quality of a website.</li>
+            </ul>
+
+
+            <h3>Real-Life Example</h3>
+
+            <p>
+                A college website can display images of the campus,
+                laboratories and classrooms. In educational notes, diagrams and
+                images help students understand technical topics more easily.
+            </p>
+
+        </article>
+
+
+
+        <!-- =========================================
+             TOPIC 4: FORMS
+        ========================================== -->
+
+        <article class="topic-card">
+
+            <h2>4. HTML Forms</h2>
+
+            <h3>4.1 Introduction</h3>
+
+            <p>
+                Forms are used to collect information from users. They are an
+                important part of interactive websites because they allow users
+                to enter data and send that data for processing.
+            </p>
+
+            <p>
+                Login pages, registration pages, feedback forms and online
+                application forms are common examples of HTML forms.
+            </p>
+
+
+            <h3>4.2 Common Form Elements</h3>
+
+            <ul>
+                <li>&lt;form&gt; – Creates a form.</li>
+                <li>&lt;input&gt; – Accepts user input.</li>
+                <li>&lt;label&gt; – Provides a description for an input field.</li>
+                <li>&lt;textarea&gt; – Accepts multi-line text.</li>
+                <li>&lt;select&gt; – Creates a drop-down menu.</li>
+                <li>&lt;button&gt; – Creates a clickable button.</li>
+            </ul>
+
+
+            <h3>4.3 Form Working</h3>
+
+            <div class="diagram">
+                <p><strong>User</strong></p>
+                <p>↓</p>
+                <p>Enters Information</p>
+                <p>↓</p>
+                <p>Clicks Submit</p>
+                <p>↓</p>
+                <p>Data Sent for Processing</p>
+                <p>↓</p>
+                <p>Result Returned to User</p>
+            </div>
+
+
+            <h3>4.4 Example</h3>
+
+            <pre>
+&lt;form&gt;
+
+    &lt;label&gt;Name:&lt;/label&gt;
+    &lt;input type="text"&gt;
+
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;label&gt;Email:&lt;/label&gt;
+    &lt;input type="email"&gt;
+
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;button type="submit"&gt;
+        Submit
+    &lt;/button&gt;
+
+&lt;/form&gt;
+            </pre>
+
+
+            <h3>Applications</h3>
+
+            <ul>
+                <li>User registration</li>
+                <li>Login systems</li>
+                <li>Feedback forms</li>
+                <li>College admission forms</li>
+                <li>Online shopping</li>
+            </ul>
+
+
+            <h3>Real-Life Example</h3>
+
+            <p>
+                Your WebLearn website can use a feedback form where students
+                enter their name, email and feedback. The information can then
+                be processed and stored by the website.
+            </p>
+
+        </article>
+
+
+
+        <!-- =========================================
+             TOPIC 5: FRAMES
+        ========================================== -->
+
+        <article class="topic-card">
+
+            <h2>5. Frames</h2>
+
+            <h3>5.1 Introduction</h3>
+
+            <p>
+                Frames were historically used to divide a browser window into
+                multiple sections. Each section could display a different HTML
+                document. For example, one frame could contain navigation while
+                another frame displayed the main content.
+            </p>
+
+            <p>
+                Traditional HTML frames are now considered outdated in modern
+                web development. Modern websites generally use CSS layouts and
+                other technologies instead.
+            </p>
+
+
+            <h3>5.2 Conceptual Diagram</h3>
+
+            <div class="diagram">
+                <p>+----------------------------------+</p>
+                <p>|           Header Frame           |</p>
+                <p>+--------------+-------------------+</p>
+                <p>| Navigation   |    Main Content   |</p>
+                <p>| Frame        |    Frame          |</p>
+                <p>+--------------+-------------------+</p>
+            </div>
+
+
+            <h3>5.3 Advantages</h3>
+
+            <ul>
+                <li>Allowed different documents to appear in one window.</li>
+                <li>Navigation could remain visible while content changed.</li>
+                <li>Provided an early method for dividing page layouts.</li>
+            </ul>
+
+
+            <h3>5.4 Disadvantages</h3>
+
+            <ul>
+                <li>Can create navigation and usability problems.</li>
+                <li>Not suitable for many modern responsive websites.</li>
+                <li>Traditional frame-based layouts are obsolete in modern HTML.</li>
+            </ul>
+
+
+            <h3>Modern Alternative</h3>
+
+            <p>
+                Modern web development uses CSS Flexbox, CSS Grid and other
+                layout technologies to create responsive sections of a website.
+                The &lt;iframe&gt; element may still be used to embed another
+                document or external content in a web page.
+            </p>
+
+        </article>
+
+
+
+        <!-- =========================================
+             TOPIC 6: DYNAMIC HTML AND JAVASCRIPT
+        ========================================== -->
+
+        <article class="topic-card">
+
+            <h2>6. Dynamic HTML (DHTML) with JavaScript</h2>
+
+            <h3>6.1 Introduction</h3>
+
+            <p>
+                Dynamic HTML refers to techniques that allow a web page to
+                change after it has been loaded in the browser. It generally
+                involves the combined use of HTML, CSS and JavaScript.
+            </p>
+
+            <p>
+                HTML provides the structure of a page, CSS controls its
+                appearance and JavaScript adds behavior and interactivity.
+                Together, these technologies can create dynamic web pages.
+            </p>
+
+
+            <h3>6.2 JavaScript</h3>
+
+            <p>
+                JavaScript is a programming language commonly used to add
+                interactive features to websites. It can respond to user
+                actions such as clicking buttons, entering text or moving the
+                mouse.
+            </p>
+
+
+            <h3>6.3 Simple Example</h3>
+
+            <pre>
+&lt;button onclick="changeText()"&gt;
+    Click Me
+&lt;/button&gt;
+
+&lt;p id="message"&gt;
+    Welcome to WebLearn
+&lt;/p&gt;
+
+&lt;script&gt;
+
+function changeText() {
+    document.getElementById("message").innerHTML =
+    "Text Changed Successfully!";
+}
+
+&lt;/script&gt;
+            </pre>
+
+
+            <h3>6.4 Working Diagram</h3>
+
+            <div class="diagram">
+                <p><strong>User Action</strong></p>
+                <p>↓</p>
+                <p>JavaScript Event</p>
+                <p>↓</p>
+                <p>JavaScript Processes Action</p>
+                <p>↓</p>
+                <p>HTML/CSS Content Changes</p>
+                <p>↓</p>
+                <p>User Sees Updated Page</p>
+            </div>
+
+
+            <h3>6.5 Applications</h3>
+
+            <ul>
+                <li>Interactive buttons</li>
+                <li>Form validation</li>
+                <li>Image galleries</li>
+                <li>Dynamic menus</li>
+                <li>Online calculators</li>
+            </ul>
+
+
+            <h3>Advantages</h3>
+
+            <ul>
+                <li>Creates interactive websites.</li>
+                <li>Improves user experience.</li>
+                <li>Can update page content without completely changing the page.</li>
+            </ul>
+
+
+            <h3>Real-Life Example</h3>
+
+            <p>
+                When a user clicks a button on a website and a menu opens
+                immediately without loading another page, JavaScript is often
+                responsible for that interaction.
+            </p>
+
+        </article>
+
+
+
+        <!-- =========================================
+             TOPIC 7: CSS
+        ========================================== -->
+
+        <article class="topic-card">
+
+            <h2>7. Cascading Style Sheets (CSS)</h2>
+
+            <h3>7.1 Introduction</h3>
+
+            <p>
+                CSS stands for Cascading Style Sheets. It is used to control
+                the appearance and presentation of HTML documents.
+            </p>
+
+            <p>
+                CSS can control colors, fonts, spacing, borders, layouts and
+                responsive design. Separating HTML structure from CSS design
+                makes websites easier to manage and maintain.
+            </p>
+
+
+            <h3>7.2 Types of CSS</h3>
+
+            <ul>
+                <li><strong>Inline CSS:</strong> Written directly inside an HTML element.</li>
+                <li><strong>Internal CSS:</strong> Written inside a &lt;style&gt; tag.</li>
+                <li><strong>External CSS:</strong> Written in a separate CSS file.</li>
+            </ul>
+
+
+            <h3>7.3 CSS Example</h3>
+
+            <pre>
+h1 {
+    color: blue;
+    text-align: center;
+}
+
+p {
+    font-size: 18px;
+}
+            </pre>
+
+
+            <h3>7.4 CSS Working</h3>
+
+            <div class="diagram">
+                <p><strong>HTML</strong> → Page Structure</p>
+                <p>↓</p>
+                <p><strong>CSS</strong> → Design and Appearance</p>
+                <p>↓</p>
+                <p>Styled Web Page Displayed in Browser</p>
+            </div>
+
+
+            <h3>7.5 Advantages of CSS</h3>
+
+            <ul>
+                <li>Separates content from design.</li>
+                <li>Provides a consistent website design.</li>
+                <li>Reduces repeated formatting code.</li>
+                <li>Supports responsive web design.</li>
+            </ul>
+
+
+            <h3>7.6 Applications</h3>
+
+            <p>
+                CSS is used on almost every modern website. Your WebLearn
+                project uses the same style.css file to provide a consistent
+                design for the Home, Syllabus and Notes pages.
+            </p>
+
+        </article>
+
+
+
+        <!-- =========================================
+             TOPIC 8: DTD
+        ========================================== -->
+
+        <article class="topic-card">
+
+            <h2>8. Document Type Definition (DTD)</h2>
+
+            <h3>8.1 Introduction</h3>
+
+            <p>
+                DTD stands for Document Type Definition. It is used to define
+                the legal structure and elements of an XML document.
+            </p>
+
+            <p>
+                A DTD can specify which elements are allowed, how elements are
+                organized and what type of structure an XML document should
+                follow.
+            </p>
+
+
+            <h3>8.2 Example</h3>
+
+            <pre>
+&lt;!ELEMENT student (name, course)&gt;
+&lt;!ELEMENT name (#PCDATA)&gt;
+&lt;!ELEMENT course (#PCDATA)&gt;
+            </pre>
+
+
+            <h3>8.3 Advantages</h3>
+
+            <ul>
+                <li>Defines a standard structure for XML documents.</li>
+                <li>Helps validate XML data.</li>
+                <li>Allows multiple documents to follow the same format.</li>
+            </ul>
+
+
+            <h3>8.4 Limitations</h3>
+
+            <ul>
+                <li>Provides fewer data type options than XML Schema.</li>
+                <li>Can be less flexible for complex data.</li>
+            </ul>
+
+
+            <h3>Real-Life Example</h3>
+
+            <p>
+                An organization can use a common document definition to ensure
+                that all student information XML files follow the same structure.
+            </p>
+
+        </article>
+
+
+
+        <!-- =========================================
+             TOPIC 9: XML SCHEMA
+        ========================================== -->
+
+        <article class="topic-card">
+
+            <h2>9. XML Schema</h2>
+
+            <h3>9.1 Introduction</h3>
+
+            <p>
+                XML Schema is a technology used to define the structure,
+                elements and data types of an XML document. It provides more
+                detailed validation features than traditional DTD.
+            </p>
+
+            <p>
+                XML Schema can specify whether a value should contain text,
+                numbers, dates or other types of information. It helps ensure
+                that XML data follows required rules.
+            </p>
+
+
+            <h3>9.2 DTD and XML Schema</h3>
+
+            <div class="diagram">
+                <p><strong>DTD</strong></p>
+                <p>↓</p>
+                <p>Defines Basic XML Structure</p>
+                <p>↓</p>
+                <p><strong>XML Schema</strong></p>
+                <p>↓</p>
+                <p>Defines Structure + Data Types + Validation Rules</p>
+            </div>
+
+
+            <h3>Advantages</h3>
+
+            <ul>
+                <li>Supports different data types.</li>
+                <li>Provides detailed validation.</li>
+                <li>Useful for complex XML documents.</li>
+            </ul>
+
+
+            <h3>Application</h3>
+
+            <p>
+                XML Schema is useful when organizations exchange structured
+                information and need to ensure that the data follows a defined
+                format.
+            </p>
+
+        </article>
+
+
+
+        <!-- =========================================
+             TOPIC 10: OBJECT MODELS
+        ========================================== -->
+
+        <article class="topic-card">
+
+            <h2>10. Object Models</h2>
+
+            <h3>10.1 Introduction</h3>
+
+            <p>
+                An object model represents a document or application as a
+                collection of objects. In web development, the most commonly
+                discussed object model is the Document Object Model, also known
+                as DOM.
+            </p>
+
+            <p>
+                The DOM represents an HTML or XML document as a tree of
+                objects. JavaScript can access and modify these objects to
+                create dynamic web pages.
+            </p>
+
+
+            <h3>10.2 DOM Tree</h3>
+
+            <div class="diagram">
+                <p><strong>Document</strong></p>
+                <p>│</p>
+                <p>└── HTML</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp; ├── HEAD</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp; └── BODY</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ├── H1</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; └── P</p>
+            </div>
+
+
+            <h3>10.3 Application</h3>
+
+            <p>
+                JavaScript can use the DOM to change text, update styles,
+                create new elements or respond to user actions.
+            </p>
+
+
+            <h3>Real-Life Example</h3>
+
+            <p>
+                When a user clicks a button and the text on a page changes,
+                JavaScript accesses the required HTML element through the DOM
+                and modifies its content.
+            </p>
+
+        </article>
+
+
+
+        <!-- =========================================
+             TOPIC 11: PRESENTING XML
+        ========================================== -->
+
+        <article class="topic-card">
+
+            <h2>11. Presenting XML</h2>
+
+            <h3>11.1 Introduction</h3>
+
+            <p>
+                XML is mainly designed to store and transport structured data.
+                However, raw XML data is not always easy for users to read.
+                Therefore, XML data may need to be transformed or styled before
+                it is presented to users.
+            </p>
+
+            <p>
+                Technologies such as CSS and XSLT can be used to present XML
+                information in a readable format.
+            </p>
+
+
+            <h3>11.2 Working Process</h3>
+
+            <div class="diagram">
+                <p><strong>XML Data</strong></p>
+                <p>↓</p>
+                <p>CSS or XSLT Processing</p>
+                <p>↓</p>
+                <p>Formatted Information</p>
+                <p>↓</p>
+                <p>Displayed to User</p>
+            </div>
+
+
+            <h3>Applications</h3>
+
+            <ul>
+                <li>Displaying structured information.</li>
+                <li>Transforming XML data into HTML pages.</li>
+                <li>Sharing data between different applications.</li>
+            </ul>
+
+
+            <h3>Real-Life Example</h3>
+
+            <p>
+                A system may store student information in XML format and then
+                transform that information into an attractive HTML page that
+                students can easily read.
+            </p>
+
+        </article>
+
+
+
+        <!-- =========================================
+             TOPIC 12: XML PROCESSORS - DOM AND SAX
+        ========================================== -->
+
+        <article class="topic-card">
+
+            <h2>12. XML Processors – DOM and SAX</h2>
+
+            <h3>12.1 Introduction</h3>
+
+            <p>
+                XML processors are software components that read and process
+                XML documents. Different processing approaches are available,
+                including DOM and SAX.
+            </p>
+
+
+            <h3>12.2 DOM Parser</h3>
+
+            <p>
+                A DOM parser reads the complete XML document and creates a
+                tree-like structure in memory. This allows a program to move
+                through the document and access different nodes.
+            </p>
+
+            <div class="diagram">
+                <p>XML Document</p>
+                <p>↓</p>
+                <p>DOM Parser</p>
+                <p>↓</p>
+                <p>Complete Tree Created in Memory</p>
+                <p>↓</p>
+                <p>Application Accesses Nodes</p>
+            </div>
+
+
+            <h3>12.3 SAX Parser</h3>
+
+            <p>
+                SAX stands for Simple API for XML. A SAX parser processes an
+                XML document sequentially and generates events while reading
+                the document.
+            </p>
+
+            <p>
+                Unlike a DOM parser, SAX does not normally create a complete
+                tree of the entire document in memory. Therefore, it can be
+                useful when processing large XML documents.
+            </p>
+
+
+            <div class="diagram">
+                <p>XML Document</p>
+                <p>↓</p>
+                <p>SAX Parser Reads Sequentially</p>
+                <p>↓</p>
+                <p>Events Generated</p>
+                <p>↓</p>
+                <p>Application Processes Events</p>
+            </div>
+
+
+            <h3>12.4 Difference Between DOM and SAX</h3>
+
+            <ul>
+                <li><strong>DOM:</strong> Creates a complete tree structure.</li>
+                <li><strong>SAX:</strong> Processes XML sequentially.</li>
+                <li><strong>DOM:</strong> Easier to navigate and modify documents.</li>
+                <li><strong>SAX:</strong> Can use less memory for large documents.</li>
+            </ul>
+
+
+            <h3>Applications</h3>
+
+            <p>
+                XML processors are used when applications need to read,
+                validate or extract information from XML documents. They can
+                be useful in data exchange systems and software applications
+                that work with structured XML data.
+            </p>
+
+
+            <h3>Important Exam Points</h3>
+
+            <ul>
+                <li>DOM represents XML as a tree structure.</li>
+                <li>SAX processes XML sequentially using events.</li>
+                <li>DOM is useful for navigation and modification.</li>
+                <li>SAX can be useful for processing large documents.</li>
+            </ul>
+
+        </article>
+
+
+
+        <!-- UNIT SUMMARY -->
+
+        <article class="topic-card">
+
+            <h2>Unit 2 Summary</h2>
+
+            <p>
+                Unit 2 introduces important technologies used in web page
+                development. HTML elements such as lists, tables, images and
+                forms are used to organize and display web content. CSS is used
+                to improve the appearance of web pages, while JavaScript adds
+                interactivity and dynamic behavior.
+            </p>
+
+            <p>
+                The unit also introduces XML and related technologies. DTD and
+                XML Schema define and validate XML structure. The DOM represents
+                documents as objects, while XML processors such as DOM and SAX
+                provide different methods for reading and processing XML data.
+            </p>
+
+            <div class="diagram">
+                <p><strong>Web Page Technologies</strong></p>
+                <p>│</p>
+                <p>├── HTML → Structure</p>
+                <p>├── CSS → Design</p>
+                <p>├── JavaScript → Interaction</p>
+                <p>└── XML → Structured Data</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp; ├── DTD</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp; ├── XML Schema</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp; ├── DOM</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp; └── SAX</p>
+            </div>
+
+        </article>
+
+
+        <!-- Back Button -->
+        <div class="back-section">
+
+            <a href="notes.html" class="back-button">
+                ← Back to All Units
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 WebLearn | Web Technology Learning Portal</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz | WebLearn</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">🌐 WebLearn</div>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="syllabus.html">Syllabus</a></li>
+            <li><a href="notes.html">Notes</a></li>
+            <li><a href="quiz.html" class="active">Quiz</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Quiz Header -->
+    <section class="quiz-header">
+        <p class="small-title">TEST YOUR KNOWLEDGE</p>
+        <h1>Web Technology Quiz</h1>
+        <p>Select a unit and answer 20 important MCQ questions.</p>
+    </section>
+
+
+    <!-- Unit Selection -->
+    <div class="unit-selection" id="unitSelection">
+
+        <button onclick="startQuiz(1)">Unit 1 Quiz</button>
+        <button onclick="startQuiz(2)">Unit 2 Quiz</button>
+        <button onclick="startQuiz(3)">Unit 3 Quiz</button>
+        <button onclick="startQuiz(4)">Unit 4 Quiz</button>
+        <button onclick="startQuiz(5)">Unit 5 Quiz</button>
+
+    </div>
+
+
+    <!-- Quiz Area -->
+    <main class="quiz-page">
+
+        <div id="quizArea" class="quiz-area">
+
+            <h2 id="unitTitle"></h2>
+
+            <p id="questionNumber"></p>
+
+            <div class="question-box">
+
+                <h3 id="questionText"></h3>
+
+                <div id="options"></div>
+
+            </div>
+
+            <button onclick="nextQuestion()" id="nextBtn">
+                Next Question →
+            </button>
+
+        </div>
+
+
+        <!-- Result Area -->
+        <div id="resultArea" class="result-area">
+
+            <h2>🎉 Quiz Completed!</h2>
+
+            <p id="scoreText"></p>
+
+            <button onclick="restartQuiz()">
+                Back to Units
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 WebLearn | Web Technology Learning Portal</p>
+    </footer>
+
+
+<script>
+
+    // =====================================
+    // UNIT 1 QUESTIONS
+    // =====================================
+
+    const unit1 = [
+
+        {
+            question: "What does WWW stand for?",
+            options: [
+                "World Wide Web",
+                "World Web Wide",
+                "Wide World Web",
+                "Web World Wide"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "What is the full form of URL?",
+            options: [
+                "Uniform Resource Locator",
+                "Universal Resource Link",
+                "Uniform Reference Link",
+                "Universal Reference Locator"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "Which protocol is mainly used to transfer web pages?",
+            options: [
+                "HTTP",
+                "FTP",
+                "SMTP",
+                "TCP"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "Which is a secure version of HTTP?",
+            options: [
+                "HTTPS",
+                "HTML",
+                "FTP",
+                "DNS"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "What is the main purpose of a web browser?",
+            options: [
+                "Display web pages",
+                "Create hardware",
+                "Print documents",
+                "Store electricity"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "Which of the following is a web browser?",
+            options: [
+                "Google Chrome",
+                "MySQL",
+                "Windows",
+                "Linux"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "What does DNS convert?",
+            options: [
+                "Domain names into IP addresses",
+                "Images into videos",
+                "HTML into CSS",
+                "Text into hardware"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "What is an IP address used for?",
+            options: [
+                "Identifying a device on a network",
+                "Creating HTML",
+                "Styling a page",
+                "Printing documents"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "What is a website?",
+            options: [
+                "A collection of related web pages",
+                "A computer keyboard",
+                "An operating system",
+                "A network cable"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "Which language structures a web page?",
+            options: [
+                "HTML",
+                "CSS",
+                "SQL",
+                "DNS"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "Which technology is mainly used for styling web pages?",
+            options: [
+                "CSS",
+                "HTML",
+                "HTTP",
+                "URL"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "Which technology makes a web page interactive?",
+            options: [
+                "JavaScript",
+                "DNS",
+                "URL",
+                "FTP"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "What is the Internet?",
+            options: [
+                "A global network of connected computers",
+                "A single computer",
+                "A web browser",
+                "A programming language"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "Which is an example of a domain name?",
+            options: [
+                "example.com",
+                "192.168.1.1",
+                "HTML",
+                "Chrome"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "What does a web server do?",
+            options: [
+                "Stores and delivers web pages",
+                "Prints documents",
+                "Creates keyboards",
+                "Scans images"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "Which device helps connect a network to the Internet?",
+            options: [
+                "Router",
+                "Monitor",
+                "Printer",
+                "Keyboard"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "Which of these is a search engine?",
+            options: [
+                "Google",
+                "Chrome",
+                "Firefox",
+                "HTML"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "What is a hyperlink used for?",
+            options: [
+                "Connecting one web page to another",
+                "Changing computer hardware",
+                "Printing a document",
+                "Creating an IP address"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "Which component displays a website to the user?",
+            options: [
+                "Web browser",
+                "Web server",
+                "Router",
+                "DNS"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "Which combination is commonly used for web development?",
+            options: [
+                "HTML, CSS and JavaScript",
+                "HTTP, DNS and FTP",
+                "Monitor, Keyboard and Mouse",
+                "CPU, RAM and ROM"
+            ],
+            answer: 0
+        }
+    ];
+
+
+    // =====================================
+    // UNIT 2 QUESTIONS
+    // =====================================
+
+    const unit2 = [
+
+        {
+            question: "What does HTML stand for?",
+            options: [
+                "Hyper Text Markup Language",
+                "High Text Machine Language",
+                "Hyper Tool Markup Language",
+                "Home Text Markup Language"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "Which tag is used for the largest heading?",
+            options: ["<h1>", "<h6>", "<head>", "<title>"],
+            answer: 0
+        },
+
+        {
+            question: "Which HTML tag creates a paragraph?",
+            options: ["<p>", "<para>", "<text>", "<pg>"],
+            answer: 0
+        },
+
+        {
+            question: "Which tag is used to create a hyperlink?",
+            options: ["<a>", "<link>", "<href>", "<url>"],
+            answer: 0
+        },
+
+        {
+            question: "Which attribute specifies the destination of a link?",
+            options: ["href", "src", "alt", "class"],
+            answer: 0
+        },
+
+        {
+            question: "Which tag is used to display an image?",
+            options: ["<img>", "<image>", "<picture>", "<src>"],
+            answer: 0
+        },
+
+        {
+            question: "Which attribute provides alternative text for an image?",
+            options: ["alt", "src", "href", "style"],
+            answer: 0
+        },
+
+        {
+            question: "Which tag creates an unordered list?",
+            options: ["<ul>", "<ol>", "<li>", "<list>"],
+            answer: 0
+        },
+
+        {
+            question: "Which tag creates an ordered list?",
+            options: ["<ol>", "<ul>", "<li>", "<order>"],
+            answer: 0
+        },
+
+        {
+            question: "Which tag is used for a list item?",
+            options: ["<li>", "<ul>", "<ol>", "<item>"],
+            answer: 0
+        },
+
+        {
+            question: "Which tag creates a table?",
+            options: ["<table>", "<tab>", "<tr>", "<td>"],
+            answer: 0
+        },
+
+        {
+            question: "Which tag creates a table row?",
+            options: ["<tr>", "<td>", "<th>", "<table>"],
+            answer: 0
+        },
+
+        {
+            question: "Which tag creates a table data cell?",
+            options: ["<td>", "<tr>", "<th>", "<table>"],
+            answer: 0
+        },
+
+        {
+            question: "Which tag creates a form?",
+            options: ["<form>", "<input>", "<button>", "<label>"],
+            answer: 0
+        },
+
+        {
+            question: "Which input type is used for an email address?",
+            options: ["email", "text", "password", "number"],
+            answer: 0
+        },
+
+        {
+            question: "Which attribute makes a form field mandatory?",
+            options: ["required", "mandatory", "validate", "check"],
+            answer: 0
+        },
+
+        {
+            question: "Which tag creates a button?",
+            options: ["<button>", "<inputbutton>", "<click>", "<btn>"],
+            answer: 0
+        },
+
+        {
+            question: "Which tag is used to insert a line break?",
+            options: ["<br>", "<break>", "<lb>", "<hr>"],
+            answer: 0
+        },
+
+        {
+            question: "Which tag is used to create a horizontal line?",
+            options: ["<hr>", "<br>", "<line>", "<p>"],
+            answer: 0
+        },
+
+        {
+            question: "Which section usually contains metadata about an HTML document?",
+            options: ["<head>", "<body>", "<footer>", "<main>"],
+            answer: 0
+        }
+    ];
+
+
+    // =====================================
+    // UNIT 3 QUESTIONS - CSS
+    // =====================================
+
+    const unit3 = [
+
+        {
+            question: "What does CSS stand for?",
+            options: [
+                "Cascading Style Sheets",
+                "Computer Style Sheets",
+                "Creative Style System",
+                "Colorful Style Sheets"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "Which symbol is used for an ID selector in CSS?",
+            options: ["#", ".", "*", "@"],
+            answer: 0
+        },
+
+        {
+            question: "Which symbol is used for a class selector?",
+            options: [".", "#", "*", "&"],
+            answer: 0
+        },
+
+        {
+            question: "Which property changes the text color?",
+            options: ["color", "font-color", "text-color", "background"],
+            answer: 0
+        },
+
+        {
+            question: "Which property changes the background color?",
+            options: ["background-color", "color", "bgcolor", "background-style"],
+            answer: 0
+        },
+
+        {
+            question: "Which property changes the font size?",
+            options: ["font-size", "text-size", "font-style", "size"],
+            answer: 0
+        },
+
+        {
+            question: "Which property makes text bold?",
+            options: ["font-weight", "font-bold", "text-weight", "bold"],
+            answer: 0
+        },
+
+        {
+            question: "Which CSS property adds space inside an element?",
+            options: ["padding", "margin", "border", "spacing"],
+            answer: 0
+        },
+
+        {
+            question: "Which CSS property adds space outside an element?",
+            options: ["margin", "padding", "border", "gap"],
+            answer: 0
+        },
+
+        {
+            question: "Which property controls the width of an element?",
+            options: ["width", "size", "length", "element-width"],
+            answer: 0
+        },
+
+        {
+            question: "Which property controls the height of an element?",
+            options: ["height", "size", "length", "element-height"],
+            answer: 0
+        },
+
+        {
+            question: "Which CSS property creates rounded corners?",
+            options: ["border-radius", "corner-radius", "border-style", "radius"],
+            answer: 0
+        },
+
+        {
+            question: "Which property is used to change the border color?",
+            options: ["border-color", "color", "border-style", "outline"],
+            answer: 0
+        },
+
+        {
+            question: "Which value makes an element a flexible container?",
+            options: ["display: flex", "display: block", "display: none", "position: fixed"],
+            answer: 0
+        },
+
+        {
+            question: "Which property is commonly used to center items in a flex container?",
+            options: ["justify-content", "font-size", "border", "position"],
+            answer: 0
+        },
+
+        {
+            question: "Which CSS property adds a shadow around an element?",
+            options: ["box-shadow", "text-shadow-only", "element-shadow", "shadow"],
+            answer: 0
+        },
+
+        {
+            question: "Which property changes the mouse cursor on hover?",
+            options: ["cursor", "mouse", "pointer-style", "hover"],
+            answer: 0
+        },
+
+        {
+            question: "Which pseudo-class is used when the mouse is over an element?",
+            options: [":hover", ":click", ":focus", ":active-link"],
+            answer: 0
+        },
+
+        {
+            question: "Which property can animate a change smoothly?",
+            options: ["transition", "transform-only", "animation-name", "position"],
+            answer: 0
+        },
+
+        {
+            question: "Which CSS feature helps create responsive layouts for different screen sizes?",
+            options: ["Media queries", "HTML forms", "DNS", "URL"],
+            answer: 0
+        }
+    ];
+
+
+    // =====================================
+    // UNIT 4 QUESTIONS - JAVASCRIPT
+    // =====================================
+
+    const unit4 = [
+
+        {
+            question: "What is JavaScript mainly used for?",
+            options: [
+                "Making web pages interactive",
+                "Creating computer hardware",
+                "Replacing HTML completely",
+                "Managing network cables"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "Which keyword can declare a variable?",
+            options: ["let", "style", "link", "form"],
+            answer: 0
+        },
+
+        {
+            question: "Which keyword declares a constant?",
+            options: ["const", "constant", "final", "fixed"],
+            answer: 0
+        },
+
+        {
+            question: "Which symbol is used for single-line comments?",
+            options: ["//", "<!--", "##", "**"],
+            answer: 0
+        },
+
+        {
+            question: "Which function displays a message box?",
+            options: ["alert()", "message()", "display()", "show()"],
+            answer: 0
+        },
+
+        {
+            question: "Which method selects an element using its ID?",
+            options: [
+                "document.getElementById()",
+                "document.getName()",
+                "document.selectId()",
+                "document.find()"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "Which event occurs when a user clicks an element?",
+            options: ["click", "hover", "load", "change"],
+            answer: 0
+        },
+
+        {
+            question: "Which keyword is used to create a function?",
+            options: ["function", "method", "create", "define"],
+            answer: 0
+        },
+
+        {
+            question: "Which operator checks equality and type in JavaScript?",
+            options: ["===", "=", "++", "!="],
+            answer: 0
+        },
+
+        {
+            question: "Which data type stores true or false?",
+            options: ["Boolean", "String", "Number", "Array"],
+            answer: 0
+        },
+
+        {
+            question: "Which loop is useful when the number of repetitions is known?",
+            options: ["for loop", "switch", "if", "function"],
+            answer: 0
+        },
+
+        {
+            question: "Which statement is used to make decisions?",
+            options: ["if", "loop", "array", "alert"],
+            answer: 0
+        },
+
+        {
+            question: "What does document.write() do?",
+            options: [
+                "Writes output to the document",
+                "Deletes JavaScript",
+                "Creates a CSS file",
+                "Opens a database"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "Which operator adds two numbers?",
+            options: ["+", "-", "*", "/"],
+            answer: 0
+        },
+
+        {
+            question: "Which method converts a JSON string into a JavaScript object?",
+            options: ["JSON.parse()", "JSON.stringify()", "JSON.convert()", "JSON.object()"],
+            answer: 0
+        },
+
+        {
+            question: "Which method stores data in browser local storage?",
+            options: [
+                "localStorage.setItem()",
+                "localStorage.save()",
+                "localStorage.store()",
+                "document.setItem()"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "Which method retrieves data from local storage?",
+            options: [
+                "localStorage.getItem()",
+                "localStorage.read()",
+                "localStorage.find()",
+                "document.getItem()"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "Which event occurs when a web page finishes loading?",
+            options: ["load", "click", "submit", "hover"],
+            answer: 0
+        },
+
+        {
+            question: "What is an array?",
+            options: [
+                "A collection of multiple values",
+                "A single HTML tag",
+                "A CSS property",
+                "A web server"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "Which statement is used to return a value from a function?",
+            options: ["return", "break", "continue", "stop"],
+            answer: 0
+        }
+    ];
+
+
+    // =====================================
+    // UNIT 5 QUESTIONS - MODERN WEB
+    // =====================================
+
+    const unit5 = [
+
+        {
+            question: "What is a responsive website?",
+            options: [
+                "A website that adapts to different screen sizes",
+                "A website without CSS",
+                "A website that only works on computers",
+                "A website with no images"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "Which technology is commonly used for responsive web design?",
+            options: [
+                "CSS Media Queries",
+                "FTP",
+                "DNS",
+                "SMTP"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "What is a web application?",
+            options: [
+                "An application accessed through a web browser",
+                "A computer keyboard",
+                "A network cable",
+                "Only a static image"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "What does cloud computing provide?",
+            options: [
+                "Computing services over the Internet",
+                "Only computer hardware",
+                "A new web browser",
+                "A programming language"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "What is an API?",
+            options: [
+                "A way for software applications to communicate",
+                "A type of web browser",
+                "A CSS property",
+                "An HTML heading"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "What does UI stand for?",
+            options: [
+                "User Interface",
+                "Universal Internet",
+                "User Input",
+                "Unified Information"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "What does UX focus on?",
+            options: [
+                "User experience",
+                "Internet speed only",
+                "Computer hardware",
+                "Database storage only"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "Which is an important web security practice?",
+            options: [
+                "Using HTTPS",
+                "Sharing passwords",
+                "Ignoring updates",
+                "Using weak passwords"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "What is a Progressive Web App (PWA)?",
+            options: [
+                "A web application with app-like features",
+                "A type of keyboard",
+                "A database only",
+                "A web server cable"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "What does SEO stand for?",
+            options: [
+                "Search Engine Optimization",
+                "Secure Engine Operation",
+                "System Error Output",
+                "Search Email Option"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "Why is mobile-friendly design important?",
+            options: [
+                "Many users access websites on mobile devices",
+                "It removes the need for HTML",
+                "It makes the Internet offline",
+                "It replaces web browsers"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "What is e-commerce?",
+            options: [
+                "Buying and selling online",
+                "Writing HTML only",
+                "Creating hardware",
+                "Managing network cables"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "What is a database used for in web applications?",
+            options: [
+                "Storing and managing data",
+                "Styling web pages",
+                "Replacing a browser",
+                "Creating a keyboard"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "What is web hosting?",
+            options: [
+                "Providing space and services to make a website available online",
+                "Creating only HTML tags",
+                "Designing a logo",
+                "Installing a keyboard"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "What is a domain name?",
+            options: [
+                "A human-readable address of a website",
+                "A type of CSS selector",
+                "A JavaScript loop",
+                "A computer monitor"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "Which technology helps websites exchange data with servers?",
+            options: [
+                "APIs",
+                "Printers",
+                "Monitors",
+                "Keyboards"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "What is artificial intelligence used for on modern websites?",
+            options: [
+                "Providing intelligent and automated features",
+                "Replacing all Internet cables",
+                "Only changing text color",
+                "Creating HTML tags manually"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "Which is an example of a modern online service?",
+            options: [
+                "Cloud storage",
+                "Paper notebook",
+                "Typewriter",
+                "Network cable"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "What is accessibility in web design?",
+            options: [
+                "Making websites usable for different users and abilities",
+                "Making websites available only to developers",
+                "Removing all images",
+                "Using only one screen size"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "Which is a benefit of modern web technology?",
+            options: [
+                "Access to information and services from anywhere",
+                "Websites can only work offline",
+                "No need for security",
+                "No need for web browsers"
+            ],
+            answer: 0
+        }
+    ];
+
+
+    // =====================================
+    // QUIZ LOGIC
+    // =====================================
+
+    let currentQuestions = [];
+    let currentQuestion = 0;
+    let score = 0;
+    let selectedUnit = 0;
+
+
+    function startQuiz(unitNumber) {
+
+        selectedUnit = unitNumber;
+
+        if (unitNumber === 1) {
+            currentQuestions = unit1;
+        }
+        else if (unitNumber === 2) {
+            currentQuestions = unit2;
+        }
+        else if (unitNumber === 3) {
+            currentQuestions = unit3;
+        }
+        else if (unitNumber === 4) {
+            currentQuestions = unit4;
+        }
+        else if (unitNumber === 5) {
+            currentQuestions = unit5;
+        }
+
+        currentQuestion = 0;
+        score = 0;
+
+        document.getElementById("unitSelection").style.display = "none";
+        document.getElementById("quizArea").style.display = "block";
+        document.getElementById("resultArea").style.display = "none";
+
+        document.getElementById("unitTitle").textContent =
+            "Unit " + selectedUnit + " Quiz";
+
+        showQuestion();
+    }
+
+
+    function showQuestion() {
+
+        let question = currentQuestions[currentQuestion];
+
+        document.getElementById("questionNumber").textContent =
+            "Question " + (currentQuestion + 1) + " of 20";
+
+        document.getElementById("questionText").textContent =
+            question.question;
+
+        let optionsHTML = "";
+
+        for (let i = 0; i < question.options.length; i++) {
+
+            optionsHTML += `
+                <label class="option-label">
+                    <input type="radio" name="answer" value="${i}">
+                    ${String.fromCharCode(65 + i)}. ${question.options[i]}
+                </label>
+            `;
+        }
+
+        document.getElementById("options").innerHTML = optionsHTML;
+
+
+        if (currentQuestion === currentQuestions.length - 1) {
+            document.getElementById("nextBtn").textContent = "Submit Quiz ✓";
+        }
+        else {
+            document.getElementById("nextBtn").textContent = "Next Question →";
+        }
+    }
+
+
+    function nextQuestion() {
+
+        let selectedAnswer = document.querySelector(
+            'input[name="answer"]:checked'
+        );
+
+
+        if (!selectedAnswer) {
+            alert("Please select an answer before continuing.");
+            return;
+        }
+
+
+        let answer = Number(selectedAnswer.value);
+
+        if (answer === currentQuestions[currentQuestion].answer) {
+            score++;
+        }
+
+
+        currentQuestion++;
+
+
+        if (currentQuestion < currentQuestions.length) {
+            showQuestion();
+        }
+        else {
+            showResult();
+        }
+    }
+
+
+    function showResult() {
+
+        document.getElementById("quizArea").style.display = "none";
+        document.getElementById("resultArea").style.display = "block";
+
+        document.getElementById("scoreText").textContent =
+            "Your Score: " + score + " / 20";
+    }
+
+
+    function restartQuiz() {
+
+        document.getElementById("resultArea").style.display = "none";
+        document.getElementById("unitSelection").style.display = "flex";
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Details | WebLearn</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">🌐 WebLearn</div>
+    </nav>
+
+
+    <main class="student-page">
+
+        <div class="student-box">
+
+            <div class="student-icon">🎓</div>
+
+            <h1>Welcome to WebLearn</h1>
+
+            <p class="student-text">
+                Please enter your details before accessing the learning portal.
+            </p>
+
+
+            <form id="studentForm">
+
+                <!-- Student Name -->
+                <div class="input-group">
+                    <label>Student Name</label>
+                    <input type="text"
+                           id="studentName"
+                           placeholder="Enter your full name"
+                           required>
+                </div>
+
+
+                <!-- QID -->
+                <div class="input-group">
+                    <label>QID</label>
+                    <input type="text"
+                           id="studentQid"
+                           placeholder="Enter your QID"
+                           required>
+                </div>
+
+
+                <!-- College Name -->
+                <div class="input-group">
+                    <label>College Name</label>
+                    <input type="text"
+                           id="collegeName"
+                           placeholder="Enter your college name"
+                           required>
+                </div>
+
+
+                <!-- Email Address -->
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <input type="email"
+                           id="studentEmail"
+                           placeholder="Enter your email address"
+                           required>
+                </div>
+
+
+                <button type="submit" class="continue-btn">
+                    Continue to WebLearn →
+                </button>
+
+            </form>
+
+        </div>
+
+    </main>
+
+
+    <script>
+
+        document.getElementById("studentForm").addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            let name = document.getElementById("studentName").value;
+            let qid = document.getElementById("studentQid").value;
+            let college = document.getElementById("collegeName").value;
+            let email = document.getElementById("studentEmail").value;
+
+
+            // Save student details in browser
+            localStorage.setItem("studentName", name);
+            localStorage.setItem("studentQid", qid);
+            localStorage.setItem("collegeName", college);
+            localStorage.setItem("studentEmail", email);
+
+
+            // Open Home Page
+            window.location.href = "index.html";
+
+        });
+
+    </script>
+
+</body>
+
+</html>
